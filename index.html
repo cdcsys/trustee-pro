@@ -2,54 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Trustee Pro — v12.1 to v12.3</title>
+  <title>Trustee Pro — v13.0 to v13.3</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Trustee Pro — AI Global Foresight + Adaptive Governance + Consolidation IX</h1>
+  <h1>Trustee Pro — AI Meta-Governance + Strategic Intelligence + Ethical Evolution + Consolidation X</h1>
 
-  <!-- AI Global Foresight Suite VIII -->
-  <section class="category" id="ai-global-foresight-suite-VIII">
-    <h2>AI Global Foresight Suite VIII v12.1</h2>
-    <form onsubmit="aiAgentGlobalForesight(event)">
-      <label>Foresight Task:</label>
-      <input type="text" id="foresightTask" required>
+  <!-- AI Meta-Governance Suite IX -->
+  <section class="category" id="ai-meta-governance-suite-IX">
+    <h2>AI Meta-Governance Suite IX v13.0</h2>
+    <form onsubmit="aiAgentMetaGovernance(event)">
+      <label>Meta-Governance Task:</label>
+      <input type="text" id="metaGovTask" required>
       <button type="submit">Run AI Agent</button>
     </form>
-    <ul id="foresightResults"></ul>
+    <ul id="metaGovResults"></ul>
   </section>
 
-  <!-- AI Adaptive Governance Suite VIII -->
-  <section class="category" id="ai-adaptive-governance-suite-VIII">
-    <h2>AI Adaptive Governance Suite VIII v12.2</h2>
-    <form onsubmit="aiAgentAdaptiveGovernance(event)">
-      <label>Governance Task:</label>
-      <input type="text" id="govTask" required>
+  <!-- AI Strategic Intelligence Suite IX -->
+  <section class="category" id="ai-strategic-intelligence-suite-IX">
+    <h2>AI Strategic Intelligence Suite IX v13.1</h2>
+    <form onsubmit="aiAgentStrategicIntelligence(event)">
+      <label>Strategic Task:</label>
+      <input type="text" id="strategicTask" required>
       <button type="submit">Run AI Agent</button>
     </form>
-    <ul id="govResults"></ul>
+    <ul id="strategicResults"></ul>
   </section>
 
-  <!-- Enterprise Consolidation Release IX -->
-  <section class="category" id="enterprise-consolidation-release-IX">
-    <h2>Enterprise Consolidation Release IX v12.3</h2>
-    <p>This release consolidates all v12.x modules (Global Foresight, Adaptive Governance) into one unified, restoration‑safe enterprise baseline for trustees.</p>
-    <p>Trustee Pro Enterprise Consolidation Release IX ensures seamless integration, rollback safety, and trustee‑ready packaging for global rollout.</p>
+  <!-- AI Ethical Evolution Suite IX -->
+  <section class="category" id="ai-ethical-evolution-suite-IX">
+    <h2>AI Ethical Evolution Suite IX v13.2</h2>
+    <form onsubmit="aiAgentEthicalEvolution(event)">
+      <label>Ethics Task:</label>
+      <input type="text" id="ethicsTask" required>
+      <button type="submit">Run AI Agent</button>
+    </form>
+    <ul id="ethicsResults"></ul>
+  </section>
+
+  <!-- Enterprise Consolidation Release X -->
+  <section class="category" id="enterprise-consolidation-release-X">
+    <h2>Enterprise Consolidation Release X v13.3</h2>
+    <p>This release consolidates all v13.x modules (Meta-Governance, Strategic Intelligence, Ethical Evolution) into one unified, restoration‑safe enterprise baseline for trustees.</p>
+    <p>Trustee Pro Enterprise Consolidation Release X ensures seamless integration, rollback safety, and trustee‑ready packaging for global rollout.</p>
   </section>
 
   <script>
-    async function aiAgentGlobalForesight(event) {
+    async function aiAgentMetaGovernance(event) {
       event.preventDefault();
-      const task = document.getElementById("foresightTask").value;
-      const result = await runAI("global-foresight", task);
-      document.getElementById("foresightResults").innerHTML += `<li>${result}</li>`;
+      const task = document.getElementById("metaGovTask").value;
+      const result = await runAI("meta-governance", task);
+      document.getElementById("metaGovResults").innerHTML += `<li>${result}</li>`;
     }
 
-    async function aiAgentAdaptiveGovernance(event) {
+    async function aiAgentStrategicIntelligence(event) {
       event.preventDefault();
-      const task = document.getElementById("govTask").value;
-      const result = await runAI("adaptive-governance", task);
-      document.getElementById("govResults").innerHTML += `<li>${result}</li>`;
+      const task = document.getElementById("strategicTask").value;
+      const result = await runAI("strategic-intelligence", task);
+      document.getElementById("strategicResults").innerHTML += `<li>${result}</li>`;
+    }
+
+    async function aiAgentEthicalEvolution(event) {
+      event.preventDefault();
+      const task = document.getElementById("ethicsTask").value;
+      const result = await runAI("ethical-evolution", task);
+      document.getElementById("ethicsResults").innerHTML += `<li>${result}</li>`;
     }
 
     async function runAI(agentType, input) {
