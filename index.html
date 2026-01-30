@@ -2,72 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Trustee Pro — v16.0 to v16.3</title>
+  <title>Trustee Pro — v17.0 to v17.3</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Trustee Pro — AI Trustee Evolution + Global Intelligence + Adaptive Ethics + Consolidation XIII</h1>
+  <h1>Trustee Pro — AI Adaptive Ecosystem + Resilience Evolution + Consolidation XIV</h1>
 
-  <!-- AI Trustee Evolution Suite XII -->
-  <section class="category" id="ai-trustee-evolution-suite-XII">
-    <h2>AI Trustee Evolution Suite XII v16.0</h2>
-    <form onsubmit="aiAgentEvolution(event)">
-      <label>Evolution Task:</label>
-      <input type="text" id="evolutionTask" required>
+  <!-- AI Adaptive Ecosystem Suite XIII -->
+  <section class="category" id="ai-adaptive-ecosystem-suite-XIII">
+    <h2>AI Adaptive Ecosystem Suite XIII v17.0</h2>
+    <form onsubmit="aiAgentAdaptiveEcosystem(event)">
+      <label>Ecosystem Task:</label>
+      <input type="text" id="ecosystemTask" required>
       <button type="submit">Run AI Agent</button>
     </form>
-    <ul id="evolutionResults"></ul>
+    <ul id="ecosystemResults"></ul>
   </section>
 
-  <!-- AI Global Intelligence Suite XII -->
-  <section class="category" id="ai-global-intelligence-suite-XII">
-    <h2>AI Global Intelligence Suite XII v16.1</h2>
-    <form onsubmit="aiAgentGlobalIntelligence(event)">
-      <label>Global Intelligence Task:</label>
-      <input type="text" id="globalIntTask" required>
+  <!-- AI Resilience Evolution Suite XIII -->
+  <section class="category" id="ai-resilience-evolution-suite-XIII">
+    <h2>AI Resilience Evolution Suite XIII v17.1</h2>
+    <form onsubmit="aiAgentResilienceEvolution(event)">
+      <label>Resilience Evolution Task:</label>
+      <input type="text" id="resilienceEvolutionTask" required>
       <button type="submit">Run AI Agent</button>
     </form>
-    <ul id="globalIntResults"></ul>
+    <ul id="resilienceEvolutionResults"></ul>
   </section>
 
-  <!-- AI Adaptive Ethics Suite XII -->
-  <section class="category" id="ai-adaptive-ethics-suite-XII">
-    <h2>AI Adaptive Ethics Suite XII v16.2</h2>
-    <form onsubmit="aiAgentAdaptiveEthics(event)">
-      <label>Ethics Task:</label>
-      <input type="text" id="ethicsTask" required>
+  <!-- AI Trustee Adaptive Ethics Suite XIII -->
+  <section class="category" id="ai-trustee-adaptive-ethics-suite-XIII">
+    <h2>AI Trustee Adaptive Ethics Suite XIII v17.2</h2>
+    <form onsubmit="aiAgentTrusteeAdaptiveEthics(event)">
+      <label>Adaptive Ethics Task:</label>
+      <input type="text" id="adaptiveEthicsTask" required>
       <button type="submit">Run AI Agent</button>
     </form>
-    <ul id="ethicsResults"></ul>
+    <ul id="adaptiveEthicsResults"></ul>
   </section>
 
-  <!-- Enterprise Consolidation Release XIII -->
-  <section class="category" id="enterprise-consolidation-release-XIII">
-    <h2>Enterprise Consolidation Release XIII v16.3</h2>
-    <p>This release consolidates all v16.x modules (Trustee Evolution, Global Intelligence, Adaptive Ethics) into one unified, restoration‑safe enterprise baseline for trustees.</p>
-    <p>Trustee Pro Enterprise Consolidation Release XIII ensures seamless integration, rollback safety, and trustee‑ready packaging for global rollout.</p>
+  <!-- Enterprise Consolidation Release XIV -->
+  <section class="category" id="enterprise-consolidation-release-XIV">
+    <h2>Enterprise Consolidation Release XIV v17.3</h2>
+    <p>This release consolidates all v17.x modules (Adaptive Ecosystem, Resilience Evolution, Adaptive Ethics) into one unified, restoration‑safe enterprise baseline for trustees.</p>
+    <p>Trustee Pro Enterprise Consolidation Release XIV ensures seamless integration, rollback safety, and trustee‑ready packaging for global rollout.</p>
   </section>
 
   <script>
-    async function aiAgentEvolution(event) {
+    async function aiAgentAdaptiveEcosystem(event) {
       event.preventDefault();
-      const task = document.getElementById("evolutionTask").value;
-      const result = await runAI("trustee-evolution", task);
-      document.getElementById("evolutionResults").innerHTML += `<li>${result}</li>`;
+      const task = document.getElementById("ecosystemTask").value;
+      const result = await runAI("adaptive-ecosystem", task);
+      document.getElementById("ecosystemResults").innerHTML += `<li>${result}</li>`;
     }
 
-    async function aiAgentGlobalIntelligence(event) {
+    async function aiAgentResilienceEvolution(event) {
       event.preventDefault();
-      const task = document.getElementById("globalIntTask").value;
-      const result = await runAI("global-intelligence", task);
-      document.getElementById("globalIntResults").innerHTML += `<li>${result}</li>`;
+      const task = document.getElementById("resilienceEvolutionTask").value;
+      const result = await runAI("resilience-evolution", task);
+      document.getElementById("resilienceEvolutionResults").innerHTML += `<li>${result}</li>`;
     }
 
-    async function aiAgentAdaptiveEthics(event) {
+    async function aiAgentTrusteeAdaptiveEthics(event) {
       event.preventDefault();
-      const task = document.getElementById("ethicsTask").value;
+      const task = document.getElementById("adaptiveEthicsTask").value;
       const result = await runAI("adaptive-ethics", task);
-      document.getElementById("ethicsResults").innerHTML += `<li>${result}</li>`;
+      document.getElementById("adaptiveEthicsResults").innerHTML += `<li>${result}</li>`;
     }
 
     async function runAI(agentType, input) {
