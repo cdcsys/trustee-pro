@@ -1,39 +1,61 @@
-<!-- AI Trustee Global Continuity Suite XIV Layer -->
-<section class="category" id="ai-trustee-global-continuity-suite-XIV">
-  <h2>AI Trustee Global Continuity Suite XIV v18.0 — Trustee Pro</h2>
-  <form onsubmit="aiAgentGlobalContinuity(event)">
-    <label>Continuity Task:</label>
-    <input type="text" id="globalContTask" required>
-    <button type="submit">Run AI Agent</button>
-  </form>
-  <ul id="globalContResults"></ul>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trustee Pro — v12.1 to v12.3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Trustee Pro — AI Global Foresight + Adaptive Governance + Consolidation IX</h1>
 
-<!-- AI Global Resilience Suite XIV Layer -->
-<section class="category" id="ai-global-resilience-suite-XIV">
-  <h2>AI Global Resilience Suite XIV v18.1 — Trustee Pro</h2>
-  <form onsubmit="aiAgentGlobalResilience(event)">
-    <label>Resilience Task:</label>
-    <input type="text" id="globalResTask" required>
-    <button type="submit">Run AI Agent</button>
-  </form>
-  <ul id="globalResResults"></ul>
-</section>
+  <!-- AI Global Foresight Suite VIII -->
+  <section class="category" id="ai-global-foresight-suite-VIII">
+    <h2>AI Global Foresight Suite VIII v12.1</h2>
+    <form onsubmit="aiAgentGlobalForesight(event)">
+      <label>Foresight Task:</label>
+      <input type="text" id="foresightTask" required>
+      <button type="submit">Run AI Agent</button>
+    </form>
+    <ul id="foresightResults"></ul>
+  </section>
 
-<!-- AI Adaptive Transparency Suite XIV Layer -->
-<section class="category" id="ai-adaptive-transparency-suite-XIV">
-  <h2>AI Adaptive Transparency Suite XIV v18.2 — Trustee Pro</h2>
-  <form onsubmit="aiAgentGlobalTransparency(event)">
-    <label>Transparency Task:</label>
-    <input type="text" id="globalTransTask" required>
-    <button type="submit">Run AI Agent</button>
-  </form>
-  <ul id="globalTransResults"></ul>
-</section>
+  <!-- AI Adaptive Governance Suite VIII -->
+  <section class="category" id="ai-adaptive-governance-suite-VIII">
+    <h2>AI Adaptive Governance Suite VIII v12.2</h2>
+    <form onsubmit="aiAgentAdaptiveGovernance(event)">
+      <label>Governance Task:</label>
+      <input type="text" id="govTask" required>
+      <button type="submit">Run AI Agent</button>
+    </form>
+    <ul id="govResults"></ul>
+  </section>
 
-<!-- Enterprise Consolidation Release XV -->
-<section class="category" id="enterprise-consolidation-release-XV">
-  <h2>Enterprise Consolidation Release XV v18.3 — Trustee Pro</h2>
-  <p>This release consolidates all v18.x modules (Global Continuity, Global Resilience, Adaptive Transparency) into one unified, restoration‑safe enterprise baseline for trustees.</p>
-  <p>Trustee Pro Enterprise Consolidation Release XV ensures seamless integration, rollback safety, and trustee‑ready packaging for global rollout.</p>
-</section>
+  <!-- Enterprise Consolidation Release IX -->
+  <section class="category" id="enterprise-consolidation-release-IX">
+    <h2>Enterprise Consolidation Release IX v12.3</h2>
+    <p>This release consolidates all v12.x modules (Global Foresight, Adaptive Governance) into one unified, restoration‑safe enterprise baseline for trustees.</p>
+    <p>Trustee Pro Enterprise Consolidation Release IX ensures seamless integration, rollback safety, and trustee‑ready packaging for global rollout.</p>
+  </section>
+
+  <script>
+    async function aiAgentGlobalForesight(event) {
+      event.preventDefault();
+      const task = document.getElementById("foresightTask").value;
+      const result = await runAI("global-foresight", task);
+      document.getElementById("foresightResults").innerHTML += `<li>${result}</li>`;
+    }
+
+    async function aiAgentAdaptiveGovernance(event) {
+      event.preventDefault();
+      const task = document.getElementById("govTask").value;
+      const result = await runAI("adaptive-governance", task);
+      document.getElementById("govResults").innerHTML += `<li>${result}</li>`;
+    }
+
+    async function runAI(agentType, input) {
+      // Placeholder: connect to AI backend (Copilot, Azure AI, etc.)
+      return `AI Agent (${agentType}) processed: ${input}`;
+    }
+  </script>
+</body>
+</html>
