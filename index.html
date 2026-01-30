@@ -1,87 +1,25 @@
-<!-- AI Performance Suite III Layer -->
-<section class="category" id="ai-performance-suite-III">
-  <h2>AI Performance Suite III v7.4 — Trustee Pro</h2>
+<!-- AI Security Suite III Layer -->
+<section class="category" id="ai-security-suite-III">
+  <h2>AI Security Suite III v7.5 — Trustee Pro</h2>
 
-  <!-- Advanced Efficiency Dashboards -->
-  <section class="module" id="efficiency-dashboards">
-    <h3>Advanced Efficiency Dashboards</h3>
-    <form onsubmit="addEfficiencyDashboard(event)">
-      <label>Efficiency Area:</label>
-      <input type="text" id="effDashArea" required>
-      <label>Efficiency Notes:</label>
-      <textarea id="effDashNotes" required></textarea>
-      <button type="submit">Log Efficiency Dashboard</button>
+  <!-- Advanced Threat Detection -->
+  <section class="module" id="threat-detection">
+    <h3>Advanced Threat Detection</h3>
+    <form onsubmit="addThreat(event)">
+      <label>Threat Area:</label>
+      <input type="text" id="threatArea" required>
+      <label>Threat Notes:</label>
+      <textarea id="threatNotes" required></textarea>
+      <button type="submit">Log Threat</button>
     </form>
-    <h4>Efficiency Dashboard Records</h4>
-    <ul id="effDashList"></ul>
+    <h4>Threat Records</h4>
+    <ul id="threatList"></ul>
   </section>
 
-  <!-- Resilience Scoring Modules -->
-  <section class="module" id="resilience-scoring">
-    <h3>Resilience Scoring Modules</h3>
-    <form onsubmit="addResilienceScore(event)">
-      <label>Resilience Area:</label>
-      <input type="text" id="resArea" required>
-      <label>Resilience Score (0-100):</label>
-      <input type="number" id="resScore" required>
-      <button type="submit">Assign Resilience Score</button>
-    </form>
-    <h4>Resilience Scores</h4>
-    <ul id="resList"></ul>
-  </section>
-
-  <!-- Outcome Benchmarking -->
-  <section class="module" id="outcome-benchmarking">
-    <h3>Outcome Benchmarking</h3>
-    <form onsubmit="addBenchmark(event)">
-      <label>Benchmark Area:</label>
-      <input type="text" id="benchArea" required>
-      <label>Benchmark Result:</label>
-      <textarea id="benchResult" required></textarea>
-      <button type="submit">Log Benchmark</button>
-    </form>
-    <h4>Benchmark Records</h4>
-    <ul id="benchList"></ul>
-  </section>
-</section>
-
-<script>
-  // Efficiency Dashboards
-  function addEfficiencyDashboard(e) {
-    e.preventDefault();
-    const area = document.getElementById("effDashArea").value;
-    const notes = document.getElementById("effDashNotes").value;
-
-    const li = document.createElement("li");
-    li.innerHTML = `<strong>${area}</strong> — Efficiency Notes: ${notes}`;
-    document.getElementById("effDashList").appendChild(li);
-
-    loopBack(e, "Efficiency Dashboard Logged");
-  }
-
-  // Resilience Scoring
-  function addResilienceScore(e) {
-    e.preventDefault();
-    const area = document.getElementById("resArea").value;
-    const score = document.getElementById("resScore").value;
-
-    const li = document.createElement("li");
-    li.innerHTML = `<strong>${area}</strong> — Resilience Score: ${score}/100`;
-    document.getElementById("resList").appendChild(li);
-
-    loopBack(e, "Resilience Score Assigned");
-  }
-
-  // Outcome Benchmarking
-  function addBenchmark(e) {
-    e.preventDefault();
-    const area = document.getElementById("benchArea").value;
-    const result = document.getElementById("benchResult").value;
-
-    const li = document.createElement("li");
-    li.innerHTML = `<strong>${area}</strong> — Benchmark Result: ${result}`;
-    document.getElementById("benchList").appendChild(li);
-
-    loopBack(e, "Benchmark Logged");
-  }
-</script>
+  <!-- Compliance Monitoring -->
+  <section class="module" id="compliance-monitoring">
+    <h3>Compliance Monitoring</h3>
+    <form onsubmit="addCompliance(event)">
+      <label>Compliance Area:</label>
+      <input type="text" id="complianceArea" required>
+      <label>Compliance Status:</label>
