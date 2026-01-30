@@ -1,52 +1,87 @@
-<!-- AI Audit Suite III Layer -->
-<section class="category" id="ai-audit-suite-III">
-  <h2>AI Audit Suite III v7.6 — Trustee Pro</h2>
+<!-- AI Integrity Suite III Layer -->
+<section class="category" id="ai-integrity-suite-III">
+  <h2>AI Integrity Suite III v7.7 — Trustee Pro</h2>
 
-  <!-- Integrated Reporting Dashboards -->
-  <section class="module" id="reporting-dashboards">
-    <h3>Integrated Reporting Dashboards</h3>
-    <form onsubmit="addReport(event)">
-      <label>Report Area:</label>
-      <input type="text" id="reportArea" required>
-      <label>Report Summary:</label>
-      <textarea id="reportSummary" required></textarea>
-      <button type="submit">Log Report</button>
+  <!-- Trustee Ethics Dashboards -->
+  <section class="module" id="ethics-dashboards">
+    <h3>Trustee Ethics Dashboards</h3>
+    <form onsubmit="addEthics(event)">
+      <label>Ethics Area:</label>
+      <input type="text" id="ethicsArea" required>
+      <label>Ethics Notes:</label>
+      <textarea id="ethicsNotes" required></textarea>
+      <button type="submit">Log Ethics Entry</button>
     </form>
-    <h4>Report Records</h4>
-    <ul id="reportList"></ul>
+    <h4>Ethics Records</h4>
+    <ul id="ethicsList"></ul>
   </section>
 
-  <!-- Advanced Audit Trails -->
-  <section class="module" id="audit-trails">
-    <h3>Advanced Audit Trails</h3>
-    <form onsubmit="addAuditTrail(event)">
-      <label>Trail Area:</label>
-      <input type="text" id="trailArea" required>
-      <label>Trail Notes:</label>
-      <textarea id="trailNotes" required></textarea>
-      <button type="submit">Log Audit Trail</button>
+  <!-- Compliance Integrity Scoring -->
+  <section class="module" id="integrity-scoring">
+    <h3>Compliance Integrity Scoring</h3>
+    <form onsubmit="addIntegrityScore(event)">
+      <label>Compliance Area:</label>
+      <input type="text" id="compIntArea" required>
+      <label>Integrity Score (0-100):</label>
+      <input type="number" id="compIntScore" required>
+      <button type="submit">Assign Integrity Score</button>
     </form>
-    <h4>Audit Trail Records</h4>
-    <ul id="trailList"></ul>
+    <h4>Integrity Scores</h4>
+    <ul id="compIntList"></ul>
   </section>
 
-  <!-- Trustee Oversight Logs -->
-  <section class="module" id="oversight-logs">
-    <h3>Trustee Oversight Logs</h3>
-    <form onsubmit="addOversight(event)">
-      <label>Oversight Area:</label>
-      <input type="text" id="oversightArea" required>
-      <label>Oversight Notes:</label>
-      <textarea id="oversightNotes" required></textarea>
-      <button type="submit">Log Oversight</button>
+  <!-- Transparent Accountability Workflows -->
+  <section class="module" id="accountability-workflows">
+    <h3>Transparent Accountability Workflows</h3>
+    <form onsubmit="addAccountability(event)">
+      <label>Accountability Area:</label>
+      <input type="text" id="accArea" required>
+      <label>Accountability Notes:</label>
+      <textarea id="accNotes" required></textarea>
+      <button type="submit">Log Accountability</button>
     </form>
-    <h4>Oversight Records</h4>
-    <ul id="oversightList"></ul>
+    <h4>Accountability Records</h4>
+    <ul id="accList"></ul>
   </section>
 </section>
 
 <script>
-  // Reporting Dashboards
-  function addReport(e) {
+  // Trustee Ethics Dashboards
+  function addEthics(e) {
     e.preventDefault();
-    const area
+    const area = document.getElementById("ethicsArea").value;
+    const notes = document.getElementById("ethicsNotes").value;
+
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>${area}</strong> — Ethics Notes: ${notes}`;
+    document.getElementById("ethicsList").appendChild(li);
+
+    loopBack(e, "Ethics Entry Logged");
+  }
+
+  // Compliance Integrity Scoring
+  function addIntegrityScore(e) {
+    e.preventDefault();
+    const area = document.getElementById("compIntArea").value;
+    const score = document.getElementById("compIntScore").value;
+
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>${area}</strong> — Integrity Score: ${score}/100`;
+    document.getElementById("compIntList").appendChild(li);
+
+    loopBack(e, "Integrity Score Assigned");
+  }
+
+  // Transparent Accountability Workflows
+  function addAccountability(e) {
+    e.preventDefault();
+    const area = document.getElementById("accArea").value;
+    const notes = document.getElementById("accNotes").value;
+
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>${area}</strong> — Accountability Notes: ${notes}`;
+    document.getElementById("accList").appendChild(li);
+
+    loopBack(e, "Accountability Logged");
+  }
+</script>
